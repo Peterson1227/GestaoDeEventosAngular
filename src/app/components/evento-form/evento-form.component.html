@@ -1,0 +1,32 @@
+<div class="form-container">
+  <h2>{{ titulo }}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="salvar()">
+    <div>
+      <label for="nome">Nome do Evento</label>
+      <input id="nome" type="text" formControlName="nome" placeholder="Digite o nome do evento" />
+    </div>
+
+    <div>
+      <label for="data">Data</label>
+      <input id="data" type="date" formControlName="data" />
+    </div>
+
+    <div>
+      <label for="local">Local</label>
+      <input id="local" type="text" formControlName="local" placeholder="Informe o local" />
+    </div>
+
+    <div>
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" rows="3" formControlName="descricao" placeholder="Breve descrição do evento"></textarea>
+    </div>
+
+    <div class="btn-container">
+      <button type="submit" class="salvar" [disabled]="form.invalid">Salvar</button>
+      <button type="button" class="cancelar" (click)="cancelar()">Cancelar</button>
+
+    </div>
+  </form>
+</div>
+

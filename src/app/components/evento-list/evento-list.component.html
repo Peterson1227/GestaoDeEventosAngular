@@ -1,0 +1,34 @@
+<div class="list-container">
+  <div class="header">
+    <h2>Gestão de Eventos</h2>
+    <button class="novo" routerLink="/novo">+ Novo Evento</button>
+  </div>
+
+  <div class="table-wrapper" *ngIf="eventos.length > 0; else vazio">
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Data</th>
+          <th>Local</th>
+          <th class="acoes">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let evento of eventos">
+          <td>{{ evento.nome }}</td>
+          <td>{{ evento.data | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ evento.local }}</td>
+          <td class="acoes">
+            <button class="editar" (click)="editar(evento.id!)">Editar</button>
+            <button class="excluir" (click)="excluir(evento.id!)">Excluir</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <ng-template #vazio>
+    <p class="vazio">Nenhum evento cadastrado ainda.</p>
+  </ng-template>
+</div>

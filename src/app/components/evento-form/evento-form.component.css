@@ -1,0 +1,99 @@
+/* ====== CONTAINER GERAL ====== */
+.form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+/* ====== TÍTULO ====== */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2d2d2d;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ====== LABELS E INPUTS ====== */
+form label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  background-color: #f9f9f9;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* ====== BOTÕES ====== */
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button.salvar {
+  background-color: #007bff;
+  color: white;
+}
+
+button.salvar:hover {
+  background-color: #0056b3;
+}
+
+button.cancelar {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+button.cancelar:hover {
+  background-color: #cacaca;
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 600px) {
+  .form-container {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .btn-container {
+    flex-direction: column;
+  }
+}
